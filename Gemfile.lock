@@ -1,0 +1,19 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    hatenablog (0.6.0)
+      nokogiri
+      oauth
+    mini_portile2 (2.4.0)
+    nokogiri (1.10.9)
+      mini_portile2 (~> 2.4.0)
+    oauth (0.5.4)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  hatenablog
+
+BUNDLED WITH
+   2.1.4
