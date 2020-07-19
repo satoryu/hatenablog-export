@@ -11,7 +11,6 @@ opt.on('-k API_KEY', '--api_key API_KEY') { |v| v }
 
 params = {}
 opt.parse!(ARGV, into: params)
-puts params
 
 client = Hatenablog::Client.new do |config|
   config.auth_type = 'basic'
@@ -46,10 +45,7 @@ class Post
   end
 
   def formatted_content
-    document = @entry.instance_variable_get(:@document)
-    formatted_content = document.xpath('/entry/hatena:formatted-content', hatena: 'http://www.hatena.ne.jp/info/xmlns#')
-
-    formatted_content[0].content
+    @entry.formatted_content
   end
 
   def filename
@@ -73,6 +69,8 @@ class Post
     ERB.new(<<~"TEMPLATE").result(binding)
     ---
     title: "<%= title %>"
+    date: <%= updated.strftime('%Y-%m-%d') %>
+    slug: "<%= slug || title %>"
     category: blog
     tags: [<%= categories.join(',') %>]
     ---
