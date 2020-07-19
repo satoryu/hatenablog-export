@@ -1,11 +1,11 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    hatenablog (0.6.0)
+    hatenablog (0.7.0)
       nokogiri
       oauth
     mini_portile2 (2.4.0)
-    nokogiri (1.10.9)
+    nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
     oauth (0.5.4)
 
