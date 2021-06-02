@@ -4,10 +4,12 @@ GEM
     hatenablog (0.7.0)
       nokogiri
       oauth
-    mini_portile2 (2.4.0)
-    nokogiri (1.10.10)
-      mini_portile2 (~> 2.4.0)
+    mini_portile2 (2.5.1)
+    nokogiri (1.11.5)
+      mini_portile2 (~> 2.5.0)
+      racc (~> 1.4)
     oauth (0.5.4)
+    racc (1.5.2)
 
 PLATFORMS
   ruby
